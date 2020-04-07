@@ -6,7 +6,10 @@ module.exports = class tlosauthConfig
     }
     getPackages()
     {
-       return []
+       return [
+	   {name:'uuid'},
+	   {name:'crypto'},
+	   ]
     }
     getMessage()
 	{

@@ -27,6 +27,34 @@ module.exports = class tlosauthBootstrap{
 			},
           ]
       }, 
+      {
+          name:'setPassword', 
+          inputs:[
+			{
+				name:'password',
+				type:'string',
+				nullable:false
+			}, 	
+          ]
+      },
+      {
+          name:'checkPassword',  
+      },
+      {
+          name:'loginPass', 
+          inputs:[
+			{
+				name:'phone',
+				type:'string',
+				nullable:false
+			},
+			{
+				name:'password',
+				type:'string',
+				nullable:false
+			},
+          ]
+      }, 
 	  
 	  
 	   
@@ -34,6 +62,9 @@ module.exports = class tlosauthBootstrap{
     this.auth=[ 
             'login',
             'verify',
+			'loginPass',
+			{name:'setPassword',role:'login'},
+			{name:'checkPassword',role:'login'},
         ]
   }
 }
